@@ -34,7 +34,7 @@ while (true){
     if (socket_select($read, $write, $except, 0) < 1){
         continue;
     }
-    
+
     if (in_array($sock, $read))
     {
         $clients[] = $newsock = socket_accept($sock);
